@@ -1,0 +1,164 @@
+:root{
+    --clr-primary-001:hsl(225, 100%, 94%);
+    --clr-primary-002:hsl(245, 75%, 52%);
+
+    --clr-neutral-001: hsl(225, 100%, 98%);
+    --clr-neutral-002: hsl(224, 23%, 55%) ;
+    --clr-neutral-003: hsl(223, 47%, 23%);
+    --clr-neutral-004: white;
+    --font-accent:"Red Hat Display", serif;
+
+    --font-light:500;
+    --font-regular:700;
+    --font-bold:900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: inline-block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  
+  body{
+    background: var(--clr-primary-001) ;
+    font-family: var(--font-accent);
+    color: var(--clr-neutral-003);
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem;
+}
+
+.main__card{
+   
+    background: var(--clr-neutral-004);
+    display: grid;
+    width:350px;
+    height: 550px;
+    border-radius:1rem;
+}
+.card__title{
+    display: flex;
+    justify-self: center;
+    font-size:1.2rem;
+    font-weight: var(--font-bold);
+    padding:1rem;
+    
+}
+.card__intro{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:15px;
+    font-weight:var(--font-light);
+    padding: 1rem;
+    color: var(--clr-neutral-002);
+ 
+}
+.price{
+    color: var(--clr-neutral-002);
+    font-weight: var(--font-light);
+
+}
+.price__plan{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    background-color: var(--clr-neutral-001);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    font-size: 15px;
+    height: 70px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.price__plan-image{
+    width:35px ;
+    height: 35px;
+    }
+
+.button{
+    border:none;
+    border-radius: 0.5rem;
+    background:var(--clr-primary-002);
+    color: hsl(225, 100%, 98%);
+    width:280px;  
+    height: 40px;
+    box-shadow: rgba(88, 11, 255, 0.23) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 30px;
+}
+.button:hover{
+    background-color:hsl(245, 90%, 68%);
+}
+
+
+.links__plan{
+    margin: 1rem;
+    font-size: 13px;
+    color: var(--clr-primary-002);
+}
+
+.links__plan:hover{
+ color:hsl(245, 90%, 68%) ;
+ text-decoration: none;
+}
+
+.links{
+    font-size:12px;
+    text-decoration: none;
+    text-align: center;
+    margin: 1rem;
+}
+.links:hover{
+    color:hsl(245, 90%, 68%);
+    text-decoration: underline;
+
+}
